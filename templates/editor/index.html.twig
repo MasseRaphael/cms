@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste{% endblock %}
+
+{% block body %}
+
+    <h1>{{ entityName }}</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entity in liste %}
+                <tr>
+                    <td>{{ entity.name }}</td>
+                    <td>
+                    <a href="{{path('editor_form', {entity_name: entityName, id: entity.id})}}">edit</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('editor_form', {entity_name: entityName}) }}">Create new</a>
+
+{% endblock %}

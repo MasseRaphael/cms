@@ -1,0 +1,39 @@
+parameters:
+  form:
+    User:
+      name: User
+      fields: 
+        name:
+          name: Name
+          type: TextType
+          namespace: Symfony\Component\Form\Extension\Core\Type\
+          option: 
+            required: true
+        email:
+          name: Email
+          type: EmailType
+          namespace: Symfony\Component\Form\Extension\Core\Type\
+          option: 
+            required: true
+        role:
+          name: Roles
+          type: CollectionType
+          namespace: Symfony\Component\Form\Extension\Core\Type\
+          option: 
+            required: true
+        plain_password:
+          name: Password
+          type: RepeatedType
+          dest: Password
+          namespace: Symfony\Component\Form\Extension\Core\Type\
+          option: 
+            required: true
+    Test:
+      name: Test
+      fields:
+        name:
+          name: Name
+          type: TextType
+          namespace: Symfony\Component\Form\Extension\Core\Type\
+          option:
+            required: true
