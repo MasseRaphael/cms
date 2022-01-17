@@ -1,6 +1,6 @@
 # cms
 
-réalisaetion des base d'un cms en symfony
+réalisation des base d'un cms en symfony
 
 ## Instalation
 
